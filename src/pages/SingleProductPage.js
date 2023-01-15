@@ -31,6 +31,7 @@ const SingleProductPage = () => {
         navigate('/')
       }, 3000)
     }
+    // eslint-disable-next-line
   }, [])
 
 
@@ -42,7 +43,7 @@ const SingleProductPage = () => {
     return <Error />
   }
 
-  const { name, id: sku, images, description, stars, reviews, price, stock, company, colors } = product
+  const { name, id: sku, images, description, stars, reviews, price, stock, company } = product
 
   return <Wrapper>
     <PageHero title={name} product />

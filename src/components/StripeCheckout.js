@@ -52,7 +52,7 @@ const CheckoutForm = () => {
         '/.netlify/functions/create-payment-intent',
         JSON.stringify({ cart, shippingFee, totalAmount })
       )
-      console.log(data.clientSecret)
+      // console.log(data.clientSecret)
       setClientSecret(data.clientSecret)
     } catch (error) {
       console.log(error.response);
@@ -87,6 +87,7 @@ const CheckoutForm = () => {
 
   useEffect(() => {
     createPaymentIntent()
+    // eslint-disable-next-line
   }, [])
 
   return (
@@ -126,8 +127,8 @@ const CheckoutForm = () => {
 }
 
 const StripeCheckout = () => {
-  const { cart, totalAmount, shippingFee, clearCart } = useCartContext()
-  const { myUser } = useUserContext()
+  // const { cart, totalAmount, shippingFee, clearCart } = useCartContext()
+  // const { myUser } = useUserContext()
   // const navigate = useNavigate()
   return (
     <Wrapper>
