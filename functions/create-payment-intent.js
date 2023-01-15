@@ -30,8 +30,8 @@ exports.handler = async function (event, context) {
         statusCode: 200,
         body: JSON.stringify(cart)
     }
-    return {
-        statusCode: 200,
-        body: 'Create Payment Intent'
-    }
+    // return {
+    //     statusCode: 200,
+    //     body: 'Create Payment Intent'
+    // }
 }
