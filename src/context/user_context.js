@@ -8,6 +8,7 @@ export const UserProvider = ({ children }) => {
 
   useEffect(() => {
     setMyUser(user)
+    // eslint-disable-next-line
   }, [user])
 
   return (
