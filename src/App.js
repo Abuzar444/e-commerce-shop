@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Navbar, Sidebar, Footer } from './components'
 import { Home, About, Cart, Products, SingleProduct, Checkout, Error, PrivateRoute, AuthWrapper } from './pages'
 function App() {
