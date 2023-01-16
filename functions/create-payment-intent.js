@@ -5,7 +5,7 @@ const stripe = require('stripe')(process.env.REACT_APP_STRIPE_SECRETE_KEY)
 
 exports.handler = async function (event, context) {
     if (event.body) {
-        const { cart, shippingFee, totalAmount } = JSON.parse(event.body)
+        const { shippingFee, totalAmount } = JSON.parse(event.body)
 
         const calculatePaymentTotal = () => {
             return shippingFee + totalAmount
@@ -28,10 +28,6 @@ exports.handler = async function (event, context) {
     }
     return {
         statusCode: 200,
-        body: JSON.stringify(cart)
+        body: 'Create Payment Intent'
     }
-    // return {
-    //     statusCode: 200,
-    //     body: 'Create Payment Intent'
-    // }
 }
