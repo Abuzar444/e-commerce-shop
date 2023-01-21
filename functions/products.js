@@ -4,7 +4,7 @@ const Airtable = require('airtable-node')
 
 const airtable = new Airtable({ apiKey: process.env.AIR_TABLE_API }).base(process.env.AIR_TABLE_BASE).table(process.env.AIR_TABLE)
 
-exports.handler = async () => {
+exports.handler = async (event, context, cb) => {
     try {
         const response = await airtable.list({ maxRecords: 200 })
         const products = response.records.map((product) => {
